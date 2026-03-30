@@ -1,0 +1,22 @@
+{
+  "agent": "product-requirement-refiner",
+  "version": "1.0",
+  "task_id": "AD-EXAMPLE-001",
+  "status": "success",
+  "human_summary": "Refined the requirement into a bounded phase-1 urban intersection scope.",
+  "machine_output": {
+    "product_requirement": {
+      "goal": "Improve unprotected left turn efficiency and safety",
+      "scenarios": ["urban_intersection"],
+      "user_value": "Reduce unnecessary waiting and disengagements",
+      "constraints": ["Do not degrade existing straight-driving behavior"],
+      "acceptance_criteria": ["Higher pass rate", "Lower waiting time"]
+    },
+    "open_questions": []
+  },
+  "handoff": {
+    "next_recommended_agents": ["system-requirement-decomposer"],
+    "required_inputs_for_next_step": ["product_requirement"]
+  },
+  "memory_updates": []
+}

@@ -1,0 +1,8 @@
+{
+  "task_id": "AD-EXAMPLE-001",
+  "raw_requirement": "Improve unprotected left turn behavior while reusing the current platform and codebase as much as possible.",
+  "repo_context": {
+    "platform": "generic_autonomous_driving_stack",
+    "known_modules": ["perception", "prediction", "planning", "control", "simulation"]
+  }
+}
