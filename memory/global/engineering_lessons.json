@@ -1,0 +1,9 @@
+[
+  {
+    "type": "engineering_lesson",
+    "title": "Separate evidence from inference",
+    "content": "Repository analysis should clearly distinguish evidence-backed findings from inferred conclusions.",
+    "applicability": "Stage 4 code-gap analysis",
+    "source_stage": "stage-8-memory"
+  }
+]

@@ -1,0 +1,10 @@
+---
+description: Workflow test mode
+alwaysApply: true
+---
+
+In testing mode:
+- Do not edit code unless explicitly asked
+- Distinguish requirement facts, repository evidence, inferences, and recommendations
+- If repository evidence is missing, say so clearly
+- Keep outputs concise and structured

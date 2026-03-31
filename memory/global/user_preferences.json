@@ -1,0 +1,9 @@
+[
+  {
+    "type": "user_preference",
+    "title": "Structured JSON outputs",
+    "content": "User prefers structured JSON outputs that can be consumed by downstream agents.",
+    "applicability": "All stages",
+    "source_stage": "stage-8-memory"
+  }
+]

@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Autonomous Driving Workflow Schema v1",
+  "type": "object",
+  "required": [
+    "workflow_schema_version",
+    "agent",
+    "task_id",
+    "stage",
+    "status",
+    "human_summary",
+    "machine_output",
+    "handoff",
+    "memory_updates"
+  ],
+  "properties": {
+    "workflow_schema_version": {
+      "type": "string",
+      "const": "adwf.v1"
+    },
+    "agent": {
+      "type": "string",
+      "enum": [
+        "product-requirement-refiner",
+        "system-requirement-decomposer",
+        "platform-gap-analyst",
+        "code-gap-analyst",
+        "solution-architect",
+        "execution-planner",
+        "retrospective-writer",
+        "memory-manager"
+      ]
+    },
+    "task_id": {"type": "string"},
+    "stage": {
+      "type": "string",
+      "enum": [
+        "stage-1-product",
+        "stage-2-system",
+        "stage-3-platform-gap",
+        "stage-4-code-gap",
+        "stage-5-solution",
+        "stage-6-execution",
+        "stage-7-retrospective",
+        "stage-8-memory"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["success", "partial", "failed"]
+    },
+    "human_summary": {"type": "string"},
+    "machine_output": {"type": "object"},
+    "handoff": {
+      "type": "object",
+      "required": ["next_recommended_agents", "required_inputs_for_next_step"],
+      "properties": {
+        "next_recommended_agents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "product-requirement-refiner",
+              "system-requirement-decomposer",
+              "platform-gap-analyst",
+              "code-gap-analyst",
+              "solution-architect",
+              "execution-planner",
+              "retrospective-writer",
+              "memory-manager"
+            ]
+          }
+        },
+        "required_inputs_for_next_step": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "memory_updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "title", "content", "applicability", "source_stage"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "engineering_lesson",
+              "workflow_rule",
+              "user_preference",
+              "architecture_decision_record",
+              "execution_plan",
+              "retrospective",
+              "project_fact"
+            ]
+          },
+          "title": {"type": "string"},
+          "content": {"type": "string"},
+          "applicability": {"type": "string"},
+          "source_stage": {
+            "type": "string",
+            "enum": [
+              "stage-1-product",
+              "stage-2-system",
+              "stage-3-platform-gap",
+              "stage-4-code-gap",
+              "stage-5-solution",
+              "stage-6-execution",
+              "stage-7-retrospective",
+              "stage-8-memory"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

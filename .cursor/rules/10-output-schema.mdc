@@ -1,0 +1,18 @@
+---
+description: Structured output schema for workflow testing
+alwaysApply: true
+---
+
+All workflow stages must output JSON with these top-level fields:
+- workflow_schema_version
+- agent
+- task_id
+- stage
+- status
+- human_summary
+- machine_output
+- handoff
+- memory_updates
+
+Never output free-form prose only.
+Use workflow_schema_version = adwf.v1.

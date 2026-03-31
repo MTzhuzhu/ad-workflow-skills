@@ -1,0 +1,18 @@
+---
+description: Autonomous driving workflow core
+alwaysApply: true
+---
+
+For requirement, design, and repo-analysis tasks, always follow this order:
+1. product-requirement-refiner
+2. system-requirement-decomposer
+3. platform-gap-analyst
+4. code-gap-analyst
+5. solution-architect
+6. execution-planner
+7. retrospective-writer
+8. memory-manager
+
+Do not jump directly to solution design.
+Prefer incremental integration over rewrite.
+Always reason about safety, latency, real-time constraints, and compatibility with existing dataflow.

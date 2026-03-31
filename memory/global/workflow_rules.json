@@ -1,0 +1,9 @@
+[
+  {
+    "type": "workflow_rule",
+    "title": "Prefer incremental integration",
+    "content": "Prefer incremental integration over rewrite for autonomous-driving workflow outputs.",
+    "applicability": "All design tasks",
+    "source_stage": "stage-8-memory"
+  }
+]
